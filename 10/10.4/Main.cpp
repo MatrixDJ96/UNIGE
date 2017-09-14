@@ -1,0 +1,6 @@
+#include "Ordine.h"
+
+int main()
+{
+	return 0;
+}
