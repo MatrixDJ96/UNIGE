@@ -32,7 +32,7 @@ int confronto(char a[], char b[])
 	{
 		for (int i1 = 0; i1 < n1; i1++)
 		{
-			for (int i2 = 0; i2 <n1; i2++)
+			for (int i2 = 0; i2 < n1; i2++)
 			{
 				if (a[i1] == c[i2])
 				{
