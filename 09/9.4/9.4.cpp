@@ -23,38 +23,32 @@ int main()
 	std::cout << "Inserisci un'altra stringa: ";
 	std::cin.getline(str2, dim, '\n');
 
-	int dim1 = dim_size(str1) - 1; // metto il -1 per escludere il char '\0'
-	int dim2 = dim_size(str2) - 1; // idem
+	int dim1 = dim_size(str1) - 1;
+	int dim2 = dim_size(str2) - 1;
 
 	int occ = 0; // numero occorrenze
 	int pos = -1; // posizione prima occorrenza
 
 	if (dim1 >= dim2)
 	{
-		int b = 0; // posizione stringa 2
-		for (int a = 0; a < dim1; a++)
+		int b = 0; 
+		for (int a = 0; a <= dim1; a++)
 		{
 			if (b < dim2)
 			{
 				if (str1[a] == str2[b])
 				{
-					occ++;
-					if (pos == -1)
-					{
-						pos = a; // imposto posizione della prima occorrenza
-					}
 					b++;
 				}
 				else
 				{
-					occ = 0;
-					pos = -1;
-					b = 0;
+					b = b == 0 ? 0 : b--;
 				}
 			}
 			else
 			{
-				a = dim1;
+				pos = a - b;
+				break;
 			}
 		}
 	}
